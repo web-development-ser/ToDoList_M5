@@ -5,6 +5,8 @@
 }
 
 main {
-  background: #DFE7F2;
+  background: #dfe7f2;
   padding: 2rem 0;
+
+  height: 100vh;
 }
