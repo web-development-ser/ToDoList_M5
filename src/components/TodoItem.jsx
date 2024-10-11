@@ -6,6 +6,7 @@ const TodoItem = ({ todoItem }) => {
     <Stack className={styles["todo-item"]} direction="horizontal">
       <input type="checkbox" name="" id="" />
       <span>{todoItem.produto}</span>
+      <span className={styles["expire-time"]}>{todoItem.validade}</span>
       <button>X</button>
     </Stack>
   );

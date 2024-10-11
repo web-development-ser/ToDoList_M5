@@ -5,7 +5,8 @@
   height: 90vh;
 }
 
-.container {
+.container,
+.dialog-card {
   display: flex;
   width: 300px;
   padding: 20px;
@@ -29,4 +30,23 @@
 .header > button,
 .header > input {
   padding: 5px 10px;
+}
+
+.dialog-card {
+  position: absolute;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > div {
+  display: flex;
+}
+
+form > div > input {
+  margin-left: auto;
 }
