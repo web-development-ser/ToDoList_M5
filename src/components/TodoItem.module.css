@@ -1,8 +1,3 @@
-.todo-item {
-  display: flex;
-  gap: 10px;
-}
-
 .todo-item > button {
   background-color: transparent;
   border: none;
@@ -12,5 +7,10 @@
 }
 
 .expire-time {
-  margin-left: auto;
+  text-align: center;
+}
+
+.close-button,
+.delete-button {
+  text-align: center;
 }

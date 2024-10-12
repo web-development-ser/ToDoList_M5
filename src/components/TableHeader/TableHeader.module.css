@@ -1,0 +1,7 @@
+.table-header {
+  text-align: center;
+}
+
+.table-header > th {
+  color: rgb(116, 116, 116);
+}
