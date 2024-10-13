@@ -2,9 +2,9 @@ import { Card, Stack, Button, Table } from "react-bootstrap";
 
 import styles from "./TodoList.module.css";
 import { useState } from "react";
-import TableHeader from "../components/TableHeader/TableHeader";
-import NewItemDialog from "../components/NewItemDialog/NewItemDialog";
-import TableBody from "../components/TableBody/TableBody";
+import TableHeader from "../../components/TableHeader/TableHeader";
+import NewItemDialog from "../../components/NewItemDialog/NewItemDialog";
+import TableBody from "../../components/TableBody/TableBody";
 
 const EMPTY_DIALOG_VALUES = {
   produto: "",
