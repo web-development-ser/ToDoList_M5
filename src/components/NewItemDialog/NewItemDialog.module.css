@@ -1,0 +1,33 @@
+.dialog-card {
+  display: flex;
+  width: 300px;
+  padding: 20px;
+
+  gap: 10px;
+
+  position: absolute;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > div {
+  display: flex;
+}
+
+form > div > input {
+  margin-left: auto;
+}
+
+.title {
+  font-size: larger;
+  text-align: center;
+}
+
+.priority-checkbox {
+  margin-left: auto;
+}
