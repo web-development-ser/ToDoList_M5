@@ -4,6 +4,7 @@ import styles from "./TodoList.module.css";
 import TableHeader from "../../components/TableHeader/TableHeader";
 import NewItemDialog from "../../components/NewItemDialog/NewItemDialog";
 import TableBody from "../../components/TableBody/TableBody";
+import Header from "../../components/Header/Header";
 
 const TodoList = ({ apiData }) => {
   const [showDialog, setShowDialog] = useState(false);
@@ -33,6 +34,7 @@ const TodoList = ({ apiData }) => {
 
   return (
     <div className={styles.page}>
+      <Header />
       <Card className={styles.container}>
         <h1 className={styles.title}>Lista de Produtos</h1>
 
