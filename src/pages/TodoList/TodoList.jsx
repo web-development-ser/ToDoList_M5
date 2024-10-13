@@ -40,7 +40,7 @@ const TodoList = ({ apiData }) => {
         </Stack>
 
         <Button onClick={() => setShowDialog(true)} variant="primary">
-          New
+          Novo Produto
         </Button>
       </Card>
 

@@ -4,7 +4,7 @@ import styles from "./NewItemDialog.module.css";
 const NewItemDialog = ({ dialogValues, setDialogValues, createNew }) => {
   return (
     <Card className={styles["dialog-card"]}>
-      <h1 className={styles.title}>New Item</h1>
+      <h1 className={styles.title}>Novo Produto</h1>
       <form action="" onSubmit={createNew}>
         <input
           value={dialogValues.produto}
@@ -38,7 +38,7 @@ const NewItemDialog = ({ dialogValues, setDialogValues, createNew }) => {
           />
         </div>
         <Button type="submit" variant="primary">
-          Create
+          Criar
         </Button>
       </form>
     </Card>

@@ -1,11 +1,11 @@
-import Form from 'react-bootstrap/Form';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './login.css';
+import Form from "react-bootstrap/Form";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Login.css";
 
 const Login = () => {
   return (
-    <section className='container_form'>
-      <Form className='form'>
+    <section className="container_form">
+      <Form className="form">
         <h2>Bem vindo ao ToDoList!</h2>
         <Form.Group className="mb-3 email" controlId="formGroupEmail">
           <Form.Label>Email</Form.Label>
@@ -18,9 +18,9 @@ const Login = () => {
         </Form.Group>
 
         <Form.Check
-        type="switch"
-        id="custom-switch"
-        label="Deseja salvar seus dados no navegador?"
+          type="switch"
+          id="custom-switch"
+          label="Deseja salvar seus dados no navegador?"
         />
 
         <div>
@@ -30,6 +30,6 @@ const Login = () => {
       </Form>
     </section>
   );
-}
+};
 
 export { Login };

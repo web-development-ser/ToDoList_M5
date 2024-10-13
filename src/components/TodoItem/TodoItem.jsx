@@ -1,4 +1,4 @@
-import { CloseButton, Stack } from "react-bootstrap";
+import { CloseButton } from "react-bootstrap";
 import styles from "./TodoItem.module.css";
 
 const TodoItem = ({ todoItem }) => {
