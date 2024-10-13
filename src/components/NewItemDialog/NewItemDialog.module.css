@@ -27,3 +27,7 @@ form > div > input {
   font-size: larger;
   text-align: center;
 }
+
+.priority-checkbox {
+  margin-left: auto;
+}

@@ -1,31 +1,35 @@
 import { Card, Stack, Button, Table } from "react-bootstrap";
-
+import { useState, useCallback } from "react";
 import styles from "./TodoList.module.css";
-import { useState } from "react";
 import TableHeader from "../../components/TableHeader/TableHeader";
 import NewItemDialog from "../../components/NewItemDialog/NewItemDialog";
 import TableBody from "../../components/TableBody/TableBody";
 
-const EMPTY_DIALOG_VALUES = {
-  produto: "",
-  validade: "",
-  prioridade: "",
-};
-
 const TodoList = ({ apiData }) => {
   const [showDialog, setShowDialog] = useState(false);
-  const [dialogValues, setDialogValues] = useState(EMPTY_DIALOG_VALUES);
+  const [dialogValues, setDialogValues] = useState({
+    produto: "",
+    validade: "",
+    prioridade: false,
+  });
 
-  function createNew(e) {
-    e.preventDefault();
-    console.log(dialogValues); //CHAMAR A API PARA CRIAR
-    hideAndClearDialog();
-  }
+  const createNew = useCallback(
+    (e) => {
+      e.preventDefault();
+      console.log(dialogValues); //CHAMAR A API PARA CRIAR
+      hideAndClearDialog();
+    },
+    [dialogValues]
+  );
 
-  function hideAndClearDialog() {
+  const hideAndClearDialog = useCallback(() => {
     setShowDialog(false);
-    setDialogValues(EMPTY_DIALOG_VALUES);
-  }
+    setDialogValues({
+      produto: "",
+      validade: "",
+      prioridade: false,
+    });
+  }, []);
 
   return (
     <div className={styles.page}>
