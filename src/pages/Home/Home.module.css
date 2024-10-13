@@ -1,0 +1,22 @@
+.main {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+
+  justify-items: center;
+  place-items: center;
+}
+
+.container > div > p {
+  max-width: 550px;
+  text-align: justify;
+}
+
+.button-bar {
+  display: flex;
+  gap: 10px;
+}
