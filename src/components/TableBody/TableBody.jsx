@@ -1,10 +1,14 @@
 import TodoItem from "../TodoItem/TodoItem";
 
-const TableBody = ({ items }) => {
+const TableBody = ({ items, deleteProduct }) => {
   return (
     <tbody>
-      {items.map((todoItem) => (
-        <TodoItem key={todoItem.produto} todoItem={todoItem} />
+      {items.map((todoItem, index) => (
+        <TodoItem
+          deleteProduct={() => deleteProduct(index)}
+          key={todoItem.produto}
+          todoItem={todoItem}
+        />
       ))}
     </tbody>
   );

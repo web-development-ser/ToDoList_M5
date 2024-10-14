@@ -2,27 +2,41 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import { Login } from "./pages/Login/login";
 import TodoList from "./pages/TodoList/TodoList";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const App = () => {
-  const apiFakeData = [
+  const [apiData, setApiData] = useState([
     {
-      produto: "Coquinha gelada",
-      validade: "01/09/2022",
+      produto: "Arrumar a casa",
+      validade: "2022-10-10",
       prioridade: true,
     },
     {
-      produto: "Arroz paia",
-      validade: "10/02/2021",
+      produto: "Ler Senhor dos Aneis",
+      validade: "2021-09-09",
       prioridade: false,
     },
-  ];
+  ]);
+
+  const deleteProduct = (index) => {
+    setApiData(apiData.filter((item, i) => i != index));
+    console.log("test", index);
+  };
+
+  useEffect(() => {
+    // getApiData();
+  }, []);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="login" element={<Login />} />
-        <Route path="/products" element={<TodoList apiData={apiFakeData} />} />
+        <Route
+          path="/tasks"
+          element={<TodoList deleteProduct={deleteProduct} apiData={apiData} />}
+        />
       </Routes>
     </BrowserRouter>
   );

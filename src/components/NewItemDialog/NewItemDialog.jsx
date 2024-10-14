@@ -13,20 +13,20 @@ const NewItemDialog = ({ dialogValues, setDialogValues, createNew }) => {
 
   return (
     <Card className={styles["dialog-card"]}>
-      <h1 className={styles.title}>Novo Produto</h1>
+      <h1 className={styles.title}>Nova Tarefa</h1>
       <form action="" onSubmit={createNew}>
         <Stack gap="0">
-          <Form.Label>Produto:</Form.Label>
+          <Form.Label>Título:</Form.Label>
           <Form.Control
             value={dialogValues.produto}
             onChange={(e) => handleInput(e, "produto")}
             required
-            placeholder="Ex.: Coquinha Gelada"
+            placeholder="Ex.: Jogar Valorant"
             type="text"
           />
         </Stack>
         <Stack>
-          <Form.Label>Validade:</Form.Label>
+          <Form.Label>Prazo:</Form.Label>
           <Form.Control
             value={dialogValues.validade}
             onChange={(e) => handleInput(e, "validade")}

@@ -6,7 +6,7 @@ import NewItemDialog from "../../components/NewItemDialog/NewItemDialog";
 import TableBody from "../../components/TableBody/TableBody";
 import Header from "../../components/Header/Header";
 
-const TodoList = ({ apiData }) => {
+const TodoList = ({ apiData, deleteProduct }) => {
   const [showDialog, setShowDialog] = useState(false);
   const [dialogValues, setDialogValues] = useState({
     produto: "",
@@ -17,7 +17,10 @@ const TodoList = ({ apiData }) => {
   const createNew = useCallback(
     (e) => {
       e.preventDefault();
-      console.log(dialogValues); //CHAMAR A API PARA CRIAR
+      // console.log(dialogValues);
+      apiData.push(dialogValues);
+
+      //CHAMAR A API PARA CRIAR
       hideAndClearDialog();
     },
     [dialogValues]
@@ -36,17 +39,17 @@ const TodoList = ({ apiData }) => {
     <div className={styles.page}>
       <Header />
       <Card className={styles.container}>
-        <h1 className={styles.title}>Lista de Produtos</h1>
+        <h1 className={styles.title}>Lista de Tarefas</h1>
 
         <Stack>
           <Table responsive>
             <TableHeader />
-            <TableBody items={apiData} />
+            <TableBody deleteProduct={deleteProduct} items={apiData} />
           </Table>
         </Stack>
 
         <Button onClick={() => setShowDialog(true)} variant="primary">
-          Novo Produto
+          Nova Tarefa
         </Button>
       </Card>
 
