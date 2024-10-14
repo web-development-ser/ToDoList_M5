@@ -1,0 +1,32 @@
+.footer {
+    background-color: #282c34; 
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+  }
+  
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+  }
+  
+.socialMedia {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+.socialMedia li {
+    margin: 0;
+  }
+  
+.socialMedia a {
+    color: white;
+    text-decoration: none;
+  }
+  
+.socialMedia a:hover {
+    color: #61dafb;
+  }

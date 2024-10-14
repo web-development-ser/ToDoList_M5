@@ -5,6 +5,7 @@ import TableHeader from "../../components/TableHeader/TableHeader";
 import NewItemDialog from "../../components/NewItemDialog/NewItemDialog";
 import TableBody from "../../components/TableBody/TableBody";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/footer/Footer";
 
 const TodoList = ({ apiData }) => {
   const [showDialog, setShowDialog] = useState(false);
@@ -33,6 +34,7 @@ const TodoList = ({ apiData }) => {
   }, []);
 
   return (
+    <>
     <div className={styles.page}>
       <Header />
       <Card className={styles.container}>
@@ -58,6 +60,8 @@ const TodoList = ({ apiData }) => {
         />
       )}
     </div>
+    <Footer />
+    </>
   );
 };
 

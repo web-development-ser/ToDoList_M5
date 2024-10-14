@@ -2,11 +2,13 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/footer/Footer";
 
 const Login = () => {
   return (
+    <>
+    <Header />
     <div className="page">
-      <Header />
       <section className="container_form">
         <Form className="form">
           <h2>Bem vindo ao ToDoList!</h2>
@@ -39,6 +41,8 @@ const Login = () => {
         </Form>
       </section>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/footer/Footer";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -35,6 +36,7 @@ const Home = () => {
           />
         </div>
       </main>
+      <Footer />
     </>
   );
 };
